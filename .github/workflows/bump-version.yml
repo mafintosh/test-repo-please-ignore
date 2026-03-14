@@ -19,11 +19,12 @@ on:
 jobs:
   bump-version:
     runs-on: ubuntu-latest
+    environment: release
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ inputs.branch }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_TOKEN }}
       - uses: actions/setup-node@v4
       - name: Configure git
         run: |
