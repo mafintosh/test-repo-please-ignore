@@ -11,5 +11,5 @@
     "url": "git+https://github.com/mafintosh/test-repo-please-ignore.git"
   },
   "license": "Apache-2.0",
-  "main": "index.js",
+  "main": "index.js"
 }
