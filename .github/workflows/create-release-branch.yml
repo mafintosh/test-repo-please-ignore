@@ -1,0 +1,20 @@
+name: Cut Release Branch
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create-release-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create release branch
+        if: endsWith(github.ref_name, '.0')
+        run: |
+          BRANCH_NAME=$(echo "${{ github.ref_name }}" | sed 's/\.[^.]*$//')
+          git checkout -b release/$BRANCH_NAME
+          git push origin release/$BRANCH_NAME
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
