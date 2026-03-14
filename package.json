@@ -1,0 +1,15 @@
+{
+  "name": "test-repo-please-ignore",
+  "version": "0.0.0",
+  "description": "testing workflows",
+  "homepage": "https://github.com/mafintosh/test-repo-please-ignore#readme",
+  "bugs": {
+    "url": "https://github.com/mafintosh/test-repo-please-ignore/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mafintosh/test-repo-please-ignore.git"
+  },
+  "license": "Apache-2.0",
+  "main": "index.js",
+}
